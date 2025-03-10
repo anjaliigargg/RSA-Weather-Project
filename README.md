@@ -1,6 +1,6 @@
 # Steps to run this project
 
-1. Download all the folder in one main folder
+1. Download all the files and folders in one main folder
 2. Open VS Code and open the main folder
 3. Open terminal in VS code and give the command npm ci. 
 (for example : C:\Users\DELL\Desktop\RSA Weather Project> npm ci)
