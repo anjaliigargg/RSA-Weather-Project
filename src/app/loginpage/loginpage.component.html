@@ -1,0 +1,16 @@
+<form (submit)="login()" class="container">
+    <h1>Planning to travel?</h1>
+    <h2>Better to check the weather before you go!</h2>
+    <div>
+      <label>Username : </label>
+      <input type="text" [(ngModel)]="username"[ngModelOptions]="{standalone: true}" required />
+    </div>
+    <div>
+      <label>Password : </label>
+      <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" required />
+    </div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <br>
+    <button type="submit" class="button">Login</button>
+  </form>
+  

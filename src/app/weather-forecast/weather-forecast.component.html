@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>8-Day Weather Forecast for {{city}}</h2>
+  <br>
+  <table *ngIf="forecastData" border="1">
+    <tr>
+      <th>Date</th>
+      <th>Temp (°C)</th>
+      <th>Humidity (%)</th>
+      <th>Weather Status</th>
+      <th>Cloud Cover (%)</th>
+      <th>Wind Speed</th>
+    </tr>
+    <tr *ngFor="let day of forecastData">
+      <td>{{day.date}}</td>
+      <td>{{day.temp}}</td>
+      <td>{{day.humidity}}</td>
+      <td>{{day.weather}}</td>
+      <td>{{day.cloud}}</td>
+      <td>{{day.wind}}</td>
+    </tr>
+  </table>
+  <div *ngIf="error" class="error">{{error}}</div>
+  <br>
+  <button (click)="goback()" class="button">BACK</button>
+</div>

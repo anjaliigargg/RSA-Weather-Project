@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Where are you travelling to?</h2>
+    <br>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="city" (keyup.enter)="getWeather()" placeholder="Enter city name" required/>
+      <button (click)="getWeather()" class="button">Get the Reports!</button>
+    </div>
+    <div *ngIf="error" class="error">{{error}}</div>
+    
+    <div *ngIf="weatherData && !error" class="weather-info">
+      <p><strong>Name of the city:</strong> {{weatherData.name}}</p>
+      <p><strong>Temperature:</strong> {{weatherData.main.temp}}°C</p>
+      <p><strong>Humidity:</strong> {{weatherData.main.humidity }}%</p>
+      <p><strong>Weather status:</strong> {{weatherData.weather[0].description }}</p>
+      <p><strong>Cloud info:</strong> {{weatherData.clouds.all }}%</p>
+      <p><strong>Wind info:</strong> {{ weatherData.wind.speed }} m/s</p>
+      <button (click)="navigateToForecast()" class="button forecast-button">View 8-Day Forecast</button>
+    </div>
+  </div>
+  
